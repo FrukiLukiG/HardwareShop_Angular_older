@@ -3,7 +3,7 @@
 ### Hardware shop - frontend - made with Angular
 
 This project was made with Visual Studio Code IDE, using the well known web development framework called Angular.  
-This project should be used with HardwareShop_Spring-Boot_v1 to see the whole website functioning.
+This project should be used with HardwareShop_Spring-Boot_v1 (https://github.com/FrukiLukiG/HardwareShop_Spring-Boot_v1) to see the whole website functioning.
 
 The project represents a web shop for PC hardware components.  
 Version 1 has a better design, but has less functionalities compared to version 2...
