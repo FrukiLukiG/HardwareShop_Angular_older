@@ -1,3 +1,18 @@
 .reviewTitle{
     margin-top: 80px;
 }
+
+.reviewTitle{
+    font-size: 26px;
+    color: brown;
+}
+
+.reviewInfo{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+.reviewHardware{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
