@@ -1,4 +1,4 @@
-# Hardware Shop - Angular - older version
+# Hardware Shop - Angular - version 1
 
 ### Hardware shop - frontend - made with Angular
 
