@@ -1,0 +1,19 @@
+h1 {
+    margin: 0 auto;
+    border: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+    color: snow;
+}
+
+nav{
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.topLinks{
+    text-decoration: none;
+    color: lightcoral;
+}

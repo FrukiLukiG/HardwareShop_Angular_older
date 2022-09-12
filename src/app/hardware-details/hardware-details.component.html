@@ -1,0 +1,15 @@
+<div id="details" > <!-- *ngIf="hardware" -->
+    <h2>{{hardware?.name}} - detalji</h2>
+    <div class="hardwareDetails"><span>Naziv: </span>{{hardware?.name}}</div>
+    <div class="hardwareDetails"><span>Cijena: </span>{{hardware?.price}} kn</div>
+</div>
+
+<div>
+    <h2>Recenzije za navedeni hardware:</h2>
+    <div *ngIf="reviewsArray?.length == 0" id="noReviews">Nema nikakvih recenzija za ovaj hardware :(</div>
+    <li *ngFor="let review of reviewsArray">
+        <div class="reviewTitle">{{review?.title}}:</div>
+        <div class="reviewInfo">{{review?.text}} - {{review?.grade}} / 5</div>
+        <hr />
+    </li>
+</div>

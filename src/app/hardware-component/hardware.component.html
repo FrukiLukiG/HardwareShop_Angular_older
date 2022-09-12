@@ -1,0 +1,71 @@
+<h2>Popis hardwarea:</h2>
+<hr />
+<ul class="hardware">
+    <li
+    *ngFor="let hardware of hardwareArray"
+    (click)="onSelect(hardware)"
+    [class.selected]="hardware === selectedHardware">
+        <a id="secondLink" [routerLink]="['/detail', hardware.code]">
+            <button type="button" id="hardwareButton">
+                <div class="hardwareName">{{hardware.name}}</div>
+                <div class="hardwarePrice">{{hardware.price}} kn</div>
+            </button>
+        </a>
+        <button type="button" id="deleteButton" (click)="deleteHardware(hardware)">X</button>
+    </li>
+</ul>
+<hr />
+
+<form method="post">
+    <div>
+        <h2>Unesi novi hardware:</h2>
+        <div class="divInput">
+            <label>Šifra:
+                <div class="divInput2">
+                    <input #code minlength="10" maxlength="10" /> unesti 10 znakova
+                </div>
+            </label>
+        </div>
+        <div class="divInput">
+            <label>Naziv:
+                <div class="divInput2">
+                    <input #name />
+                </div>
+            </label>
+        </div>
+        <div class="divInput">
+            <label>Tip:
+                <div class="divInput2">
+                    <select #type id="selectType">
+                        <option value="MBO">MBO</option>
+                        <option value="CPU">CPU</option>
+                        <option value="GPU">GPU</option>
+                        <option value="RAM">RAM</option>
+                        <option value="STORAGE">STORAGE</option>
+                        <option value="OTHER" selected>OTHER</option>
+                    </select>
+                </div>
+            </label>
+        </div>
+        <div class="divInput">
+            <label>Cijena:
+                <div class="divInput2">
+                <input type="number" #price /> unesti broj veći od 0
+                </div>
+            </label>
+        </div>
+        <div class="divInput">
+            <label>Broj komada:
+                <div class="divInput2">
+                <input type="number" #numAvailable /> unesti broj veći od 0 i ne veći od 1000
+                </div>
+            </label>
+        </div>
+        <div id="divButton">
+            <button id="inputButton" (click)="addHardware(code.value, name.value, type.value, price.value, numAvailable.value); 
+                    code.value = ''; name.value = ''; type.value = ''; price.value = ''; numAvailable.value = '';">
+            UNOS
+            </button>
+        </div>
+    </div>
+</form>

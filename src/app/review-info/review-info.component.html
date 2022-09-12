@@ -1,0 +1,5 @@
+<div *ngIf="reviewPassed">
+<div class="reviewTitle">{{reviewPassed?.title}}:</div>
+<div class="reviewInfo">{{reviewPassed?.text}} - {{reviewPassed?.grade}} / 5</div>
+<div class="reviewHardware">{{reviewPassed?.hardwareToReview?.name}}/{{reviewPassed?.hardwareToReview?.code}}/{{reviewPassed?.hardwareToReview?.type}}</div>
+</div>

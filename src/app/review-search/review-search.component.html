@@ -1,0 +1,30 @@
+<form method="post">
+    <div>
+        <h2>Pretraži review po naslovu:</h2>
+        <div class="divInput">
+            <label>Tekst:
+                <div class="divInput2">
+                    <input type="text" #str />
+                </div>
+            </label>
+        </div>
+        <div id="divButton">
+            <button id="inputButtonText" (click)="getReviewsByString(str.value); str.value = '';">
+            PRETRAZI
+            </button>
+        </div>
+    </div>
+</form>
+
+<div>
+    <h2>Recenzije:</h2>
+    <div *ngIf="reviewsArray?.length == 0" id="noReviews">Nema nikakvih recenzija sa takvim tekstom.</div>
+    <li *ngFor="let review of reviewsArray"
+    (click)="onSelect(review)"
+    [class.selected]="review === selectedReview">
+            <div class="reviewTitle">{{review?.title}}:</div>
+            <div class="reviewInfo">{{review?.text}} - {{review?.grade}} / 5</div>
+            <hr />
+    </li>
+</div>
+<app-review-info [reviewPassed]="selectedReview"></app-review-info>
